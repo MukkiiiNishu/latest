@@ -1,16 +1,28 @@
 import React, { useEffect, useState, useRef } from "react";
 
 const items = [
-  { src: "/1.jpg", text: "You made my world brighter, just by being in it." },
-  { src: "/7.jpg", text: "Our first walk together — I still remember your smile." },
-  { src: "/3.jpg", text: "From awkward to awesome, our story bloomed beautifully." },
-  { src: "/4.jpg", text: "You are my favorite hello and hardest goodbye." },
-  { src: "/9.jpg", text: "Every day with you is my favorite memory." },
-  { src: "/6.jpg", text: "You made my world brighter, just by being in it." },
-  { src: "/2.jpg", text: "Our first walk together — I still remember your smile." },
-  { src: "/8.jpg", text: "From awkward to awesome, our story bloomed beautifully." },
-  { src: "/5.jpg", text: "Every day with you is my favorite memory." },
+  {
+    src: "/1.jpg",
+    text: "Tum aayi zindagi mein... sab kuch thoda aur khoobsurat ho gaya ✨\nHar lamha tere saath, jaise kisi film ka pyaara sa scene 🎬\nPata nahi kab... par main pura ka pura tera ho gaya 💕",
+  },
+  {
+    src: "/2.jpg",
+    text: "Pehli baar jab tu haansi thi... lagaa time ruk gaya ho 💫\nBas wahi moment tha jahan se sab shuru hua 🌸\nAur dil bola... “yeh wali toh apni hi hai” 😌",
+  },
+  {
+    src: "/3.jpg",
+    text: "Tere saath har choti baat bhi special ban jaati hai 💬\nKabhi gussa, kabhi pyaar... par har baar tu hi chahiye 💞\nSach bolun? Tu mil gayi, toh sab kuch mil gaya 🥹",
+  },
+  {
+    src: "/4.jpg",
+    text: "Main strong dikh sakta hoon sabke saamne 💪\nPar tu jo aankhon mein dekhti hai... sab kuch padh leti hai 👀\nTere saath, main waise hoon jaise main hoon — bina mask ke ❤️",
+  },
+  {
+    src: "/5.jpg",
+    text: "Hum hamesha ke liye ban gaye hain... tu aur main 🫶\nHar mushkil, har khushi... bas tu saath ho 💑\nTu hansti hai, toh meri duniya khil jaati hai 🌍💐",
+  },
 ];
+
 
 export default function MemorySlideshow({ onComplete }) {
   const [index, setIndex] = useState(0);
