@@ -30,16 +30,6 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <div className="w-full px-6 py-12">
-      <div className="text-center mb-10">
-        <h2 className="text-2xl md:text-3xl font-bold text-pink-600">
-          💖 Dii-Jiju hamare lagte sabko pyaare 💖
-        </h2>
-        <p className="mt-2 text-rose-500 italic">
-          Messages from the heart, from those who know your love the best.
-        </p>
-      </div>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {testimonials.map((t, index) => (
           <div
