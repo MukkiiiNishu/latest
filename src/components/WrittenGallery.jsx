@@ -1,21 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const images = [
   "/11.jpg",
-  "21.jpg",
+  "/21.jpg",
   "/31.jpg",
   "/41.jpg",
   "/51.jpg",
   "/61.jpg",
 ];
 
-export default function WrittenGallery() {
+export default function WrittenGallery({ onComplete }) {
   const [zoomedImage, setZoomedImage] = useState(null);
+
+  // ✅ Trigger the parent when the gallery loads (only once)
+  useEffect(() => {
+    if (onComplete) {
+      const timer = setTimeout(() => onComplete(), 1000); // slight delay feels natural
+      return () => clearTimeout(timer);
+    }
+  }, [onComplete]);
 
   return (
     <div className="w-full flex flex-col items-center">
       <h2 className="text-xl md:text-2xl font-bold text-rose-600 italic mb-6">
-        Mujhe uska likha padhna !! ✍️
+        Her Beautiful Writings ✍️
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl px-4">
         {images.map((src, i) => (
