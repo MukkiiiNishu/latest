@@ -2,9 +2,13 @@ import React, { useEffect, useState, useRef } from "react";
 
 const items = [
   { src: "/1.jpg", text: "You made my world brighter, just by being in it." },
-  { src: "/2.jpg", text: "Our first walk together — I still remember your smile." },
+  { src: "/7.jpg", text: "Our first walk together — I still remember your smile." },
   { src: "/3.jpg", text: "From awkward to awesome, our story bloomed beautifully." },
   { src: "/4.jpg", text: "You are my favorite hello and hardest goodbye." },
+  { src: "/9.jpg", text: "Every day with you is my favorite memory." },
+  { src: "/6.jpg", text: "You made my world brighter, just by being in it." },
+  { src: "/2.jpg", text: "Our first walk together — I still remember your smile." },
+  { src: "/8.jpg", text: "From awkward to awesome, our story bloomed beautifully." },
   { src: "/5.jpg", text: "Every day with you is my favorite memory." },
 ];
 
