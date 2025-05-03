@@ -9,9 +9,8 @@ Since that day a spark begun;
 Your everything got imprinted in my heart;
 As the time went by
 My love for you grew stronger;
-And now...
-I know for sure,
-Arranged marriage turned into Love Marriage 💖`;
+And now I know for sure,
+Together will have the best time of our life 💖`;
 
 export default function MessagePoem({ onComplete }) {
   const [displayed, setDisplayed] = useState("");
