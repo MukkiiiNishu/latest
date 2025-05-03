@@ -23,7 +23,7 @@ export default function WrittenGallery({ onComplete }) {
   return (
     <div className="w-full flex flex-col items-center">
       <h2 className="text-xl md:text-2xl font-bold text-rose-600 italic mb-6">
-        Her Beautiful Writings ✍️
+        Mujhe likhte huee tum meri Prachi ✍️
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl px-4">
         {images.map((src, i) => (
