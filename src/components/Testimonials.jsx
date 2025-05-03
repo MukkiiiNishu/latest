@@ -3,28 +3,28 @@ import React from "react";
 const testimonials = [
   {
     name: "Sarika",
-    image: "/1.jpg",
-    message: "Prachi di and Mukesh jiju are the perfect match – their bond inspires all of us!",
+    image: "/sarika.jpg",
+    message: "Prachi di and Mukesh jiju are the perfect match – made for each other!",
   },
   {
     name: "Usham",
     image: "/2.jpg",
-    message: "She found the one who makes her laugh the loudest and love the deepest!",
+    message: "",
   },
   {
     name: "Niyati",
-    image: "/3.jpg",
-    message: "Jiju brings out the best version of di – what more could we ask for?",
+    image: "/niyati.jpg",
+    message: "Prachi Didi bahut caring, protective h ! jijaji hamare bhot kind, jolly nature ke hai ",
   },
   {
     name: "Ruchika",
     image: "/4.jpg",
-    message: "You both are proof that soulmates really do exist. Wishing you eternal love!",
+    message: "Together, you shine brighter than stars. Di, you chose perfectly!",
   },
   {
-    name: "Prachi",
+    name: "Meri Prachi",
     image: "/5.jpg",
-    message: "Together, you shine brighter than stars. Di, you chose perfectly!",
+    message: "I found the one who makes me laugh the loudest and love the deepest! Love you meri googlii ",
   },
 ];
 
