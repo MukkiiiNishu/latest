@@ -9,7 +9,7 @@ const testimonials = [
   {
     name: "Usham",
     image: "/2.jpg",
-    message: "",
+    message: "jijajii aap Aweeesommeeee ho bilkul meri trah !",
   },
   {
     name: "Niyati",
