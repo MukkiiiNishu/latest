@@ -23,13 +23,18 @@ export default function CanvasHeart({ onComplete }) {
 
   const target = new Date("2025-05-09T07:30:00Z");
   const getCountdown = () => {
+    const target = new Date("2025-05-09T07:30:00Z"); // 1 PM IST = 07:30 UTC
     const now = new Date();
     const diff = target - now;
-    const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
-    return days > 0
-      ? `${days} day${days > 1 ? "s" : ""} to go 💍`
-      : "Today is the day 💖";
+
+    if (diff <= 0) return "Today is the day 💖";
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+    return `${days} day${days !== 1 ? "s" : ""} and ${hours} hour${hours !== 1 ? "s" : ""} to go 💍`;
   };
+
 
   const getHeartPoint = (angle, cx, cy) => {
     const t = angle / Math.PI;
@@ -175,15 +180,32 @@ export default function CanvasHeart({ onComplete }) {
 
       if (bloomingDone.current) {
         ctx.save();
-        ctx.fillStyle = "#444";
-        ctx.font = "bold 32px 'Courier New'";
         ctx.textAlign = "center";
-        ctx.fillText(getCountdown(), cx, cy - 10);
+        ctx.textBaseline = "middle";
 
+        // Countdown text (top)
+        ctx.font = "bold 22px 'Courier New'";
+        ctx.fillStyle = "#444";
+        ctx.fillText(getCountdown(), cx, cy - 40); // More upward
+
+        // Romantic message (center-ish)
         ctx.font = "bold 20px Arial";
         ctx.fillStyle = "#ff3e6c";
-        ctx.fillText("Engaged to be soon 💍", cx, cy + 30);
+        ctx.fillText("Engaged to be soon 💍", cx, cy - 10); // More space below countdown
+
+        // Final love line
+        ctx.font = "bold 22px 'Comic Sans MS', cursive";
+        ctx.fillStyle = "#d6336c";
+        ctx.fillText("I love you Prachi", cx, cy + 35); // More space below message
+
+        // 💞 Heart emoji (bottom, more gap after love line)
+        ctx.font = "bold 42px Arial";
+        ctx.fillStyle = "#e91e63";
+        ctx.fillText("💞", cx, cy + 90);
+
         ctx.restore();
+
+
       }
 
       requestAnimationFrame(drawLoop);
@@ -199,6 +221,6 @@ export default function CanvasHeart({ onComplete }) {
       />
     </div>
   );
-  
 
-  }
+
+}
