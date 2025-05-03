@@ -8,7 +8,7 @@ const testimonials = [
   },
   {
     name: "Usham",
-    image: "/2.jpg",
+    image: "/usham.jpg",
     message: "jijajii aap Aweeesommeeee ho bilkul meri trah !",
   },
   {
