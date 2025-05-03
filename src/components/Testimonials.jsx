@@ -46,7 +46,6 @@ export default function Testimonials() {
             <h4 className="text-rose-600 font-semibold text-xs mt-auto">{t.name}</h4>
           </div>
         ))}
-      </div>
     </div>
   );
 }
