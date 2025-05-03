@@ -1,0 +1,26 @@
+.quiz-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255,192,203,0.15), transparent 70%);
+    background-size: 400px 400px;
+    animation: floatHearts 20s linear infinite;
+    z-index: -1;
+  }
+  
+  @keyframes floatHearts {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 1000px; }
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+  }
+  
+  .animate-shake {
+    animation: shake 0.5s ease-in-out;
+  }
+  
