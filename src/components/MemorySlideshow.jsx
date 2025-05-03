@@ -33,7 +33,7 @@ export default function MemorySlideshow({ onComplete }) {
           }
         }, 2000);
       }
-    }, 10);
+    }, 50);
 
     return () => clearInterval(interval);
   }, [index]);
