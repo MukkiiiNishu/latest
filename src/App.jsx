@@ -130,7 +130,7 @@ export default function App() {
     if (poemDone && heartDone) {
       setTimeout(() => {
         section2Ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 3000);
+      }, 2000);
     }
   }, [poemDone, heartDone]);
 
@@ -138,7 +138,7 @@ export default function App() {
     if (memoriesDone) {
       setTimeout(() => {
         section3Ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 3000);
+      }, 2000);
     }
   }, [memoriesDone]);
 
@@ -146,7 +146,7 @@ export default function App() {
     if (quizDone) {
       setTimeout(() => {
         section4Ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 3000);
+      }, 2000);
     }
   }, [quizDone]);
 
@@ -154,7 +154,7 @@ export default function App() {
     if (writtenDone) {
       setTimeout(() => {
         section5Ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 3000);
+      }, 5000);
     }
   }, [writtenDone]);
 
