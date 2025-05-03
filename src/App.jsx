@@ -5,7 +5,6 @@ import MemorySlideshow from "./components/MemorySlideshow";
 import QuizLoop from "./components/QuizLoop";
 import WrittenGallery from "./components/WrittenGallery";
 
-
 export default function App() {
   const [poemDone, setPoemDone] = useState(false);
   const [heartDone, setHeartDone] = useState(false);
@@ -16,22 +15,28 @@ export default function App() {
   const section3Ref = useRef(null);
   const section4Ref = useRef(null);
 
-  // Smooth scrolling into sections
+  // Scroll with delay logic
   useEffect(() => {
     if (poemDone && heartDone && section2Ref.current) {
-      section2Ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      setTimeout(() => {
+        section2Ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 3000); // 5s delay
     }
   }, [poemDone, heartDone]);
 
   useEffect(() => {
     if (memoriesDone && section3Ref.current) {
-      section3Ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      setTimeout(() => {
+        section3Ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 3000);
     }
   }, [memoriesDone]);
 
   useEffect(() => {
     if (quizDone && section4Ref.current) {
-      section4Ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      setTimeout(() => {
+        section4Ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 3000);
     }
   }, [quizDone]);
 
@@ -78,32 +83,18 @@ export default function App() {
           <QuizLoop onComplete={() => setQuizDone(true)} />
         </div>
       )}
+
       {/* Section 4 - Writing Gallery */}
-{quizDone && (
-  <div ref={section4Ref} className="min-h-screen flex flex-col justify-center items-center px-4">
-    {/* Break line */}
-    <div className="relative my-8 flex items-center justify-center w-full">
-      <div className="w-full h-px bg-gradient-to-r from-pink-200 via-rose-300 to-pink-200" />
-      <span className="absolute px-6 py-1 bg-[#fffdeb] text-rose-600 text-lg md:text-xl font-semibold italic rounded-full shadow-md animate-pulse border border-rose-200">
-        usse likhna pasand hai !!
-      </span>
-    </div>
-
-    {/* 📖 Gallery */}
-    <WrittenGallery />
-  </div>
-)}
-
-
-      {/* Section 5 - Final Title */}
-      { WrittenGallery&& (
-        <div ref={section5Ref} className="min-h-screen flex flex-col justify-center items-center px-4">
+      {quizDone && (
+        <div ref={section4Ref} className="min-h-screen flex flex-col justify-center items-center px-4">
+          {/* Break line */}
           <div className="relative my-8 flex items-center justify-center w-full">
             <div className="w-full h-px bg-gradient-to-r from-pink-200 via-rose-300 to-pink-200" />
             <span className="absolute px-6 py-1 bg-[#fffdeb] text-rose-600 text-lg md:text-xl font-semibold italic rounded-full shadow-md animate-pulse border border-rose-200">
-              Pyaar Kiya to Darna Kya ❤️
+              usse likhna pasand hai !!
             </span>
           </div>
+          <WrittenGallery />
         </div>
       )}
     </div>
